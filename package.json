@@ -1,0 +1,42 @@
+{
+  "name": "vibe-scan-lite",
+  "version": "1.0.0",
+  "description": "Free offline CLI security scanner for AI-generated JavaScript, TypeScript, and Python projects.",
+  "license": "MIT",
+  "engines": {
+    "node": ">=20.0.0"
+  },
+  "bin": {
+    "vibe-scan-lite": "./bin/vibe-scan.js"
+  },
+  "files": [
+    "bin",
+    "dist",
+    "README.md"
+  ],
+  "scripts": {
+    "build": "tsc -p tsconfig.json",
+    "scan": "node bin/vibe-scan.js ./test-project",
+    "scan:json": "node bin/vibe-scan.js ./test-project --json"
+  },
+  "keywords": [
+    "security",
+    "scanner",
+    "vibe-coding",
+    "ai-generated",
+    "typescript",
+    "python",
+    "cli",
+    "free",
+    "open-source"
+  ],
+  "dependencies": {
+    "chalk": "^5.4.1",
+    "commander": "^13.1.0",
+    "glob": "^11.0.1"
+  },
+  "devDependencies": {
+    "@types/node": "^22.13.14",
+    "typescript": "^5.9.0"
+  }
+}
