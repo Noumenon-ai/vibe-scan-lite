@@ -120,7 +120,7 @@ Vibe Scan Lite covers the 5 most critical patterns. The **full version** include
 - **File Security** -- Path traversal, unrestricted uploads
 - **Python** -- pickle deserialization, subprocess shell=True, and more
 
-**Get the full version: [https://YOURGUMROAD.com/l/vibe-scan](https://YOURGUMROAD.com/l/vibe-scan)**
+**Get the full version: (https://noumenon6.gumroad.com/l/vibe-scan)**
 
 ---
 
