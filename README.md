@@ -127,3 +127,5 @@ Vibe Scan Lite covers the 5 most critical patterns. The **full version** include
 ## License
 
 MIT License. Use it, fork it, ship it.
+---
+Built by [Noumenon](https://github.com/Noumenon-ai)
