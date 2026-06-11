@@ -15,6 +15,14 @@ exports.rules = [
                 fix: "Move the credential into an environment variable or secret manager.",
             },
             {
+                // OpenAI-style raw key values (sk-..., sk-proj-...). Requires an
+                // assignment/quote context plus 20+ key characters to avoid
+                // flagging prose or identifiers that merely start with "sk-".
+                regex: /['"`=:\s]sk-(?:[A-Za-z0-9]+-)*[A-Za-z0-9_-]{20,}/,
+                description: "An OpenAI-style secret key value (sk-...) is hardcoded in source code.",
+                fix: "Move the key into an environment variable (e.g. OPENAI_API_KEY) or a secret manager.",
+            },
+            {
                 regex: /\b(OPENAI_API_KEY|STRIPE_SECRET_KEY|SUPABASE_SERVICE_ROLE_KEY|RESEND_API_KEY|TWILIO_AUTH_TOKEN|SENDGRID_API_KEY)\b\s*[:=]\s*['"`][^'"`]{10,}['"`]/i,
                 description: "A provider secret is assigned directly in code instead of being loaded securely at runtime.",
                 fix: "Read the secret from process.env or a secret manager and keep it out of source control.",
