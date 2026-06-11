@@ -86,7 +86,7 @@ export function renderTerminalReport(
   lines.push(`  Full report saved to: ${outputPath}`);
   lines.push("");
   lines.push(chalk.dim("  Want all 35+ security rules? Get the full version:"));
-  lines.push(chalk.dim("  https://YOURGUMROAD.com/l/vibe-scan"));
+  lines.push(chalk.dim("  https://noumenon6.gumroad.com/l/vibe-scan"));
 
   return lines.join("\n").replace(/\n{3,}/g, "\n\n");
 }

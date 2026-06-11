@@ -74,7 +74,7 @@ function renderTerminalReport(report, outputPath, scannedFiles, verbose) {
     lines.push(`  Full report saved to: ${outputPath}`);
     lines.push("");
     lines.push(chalk_1.default.dim("  Want all 35+ security rules? Get the full version:"));
-    lines.push(chalk_1.default.dim("  https://YOURGUMROAD.com/l/vibe-scan"));
+    lines.push(chalk_1.default.dim("  https://noumenon6.gumroad.com/l/vibe-scan"));
     return lines.join("\n").replace(/\n{3,}/g, "\n\n");
 }
 function renderFinding(finding) {
