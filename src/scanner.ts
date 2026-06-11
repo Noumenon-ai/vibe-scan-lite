@@ -16,8 +16,12 @@ const IGNORE_PATTERNS = [
   "**/__pycache__/**",
   "**/.venv*/**",
   "**/venv*/**",
-  "**/.env/**",
-  "**/env/**",
+  // NOTE: never add "**/.env/**" here. glob's ignore handling treats
+  // "<dir>/**" as also excluding the path itself, so "**/.env/**" silently
+  // excluded .env FILES and broke the .env/.gitignore rules entirely.
+  "**/env/lib/**",
+  "**/env/bin/**",
+  "**/env/Scripts/**",
   "**/.next/**",
   "**/coverage/**",
   "**/__tests__/**",
