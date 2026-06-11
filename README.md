@@ -4,8 +4,11 @@ Stop shipping security holes. Vibe Scan Lite catches the **5 most dangerous patt
 
 Zero config. Zero cloud. Runs entirely offline on your machine.
 
-```
-npx vibe-scan-lite ./my-project
+```bash
+git clone https://github.com/Noumenon-ai/vibe-scan-lite.git
+cd vibe-scan-lite
+npm install && npm run build
+node bin/vibe-scan.js /path/to/your/project
 ```
 
 ## What It Catches
@@ -68,13 +71,16 @@ npx vibe-scan-lite ./my-project
 
 ```bash
 # Clone and build
-git clone https://github.com/YOURREPO/vibe-scan-lite.git
+git clone https://github.com/Noumenon-ai/vibe-scan-lite.git
 cd vibe-scan-lite
 npm install && npm run build
 
 # Scan any project
 node bin/vibe-scan.js /path/to/your/project
 ```
+
+The package is not yet published to npm, so clone-and-build is the
+supported install path.
 
 ## Usage
 
