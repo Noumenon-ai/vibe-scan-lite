@@ -5,10 +5,7 @@ Stop shipping security holes. Vibe Scan Lite catches the **5 most dangerous patt
 Zero config. Zero cloud. Runs entirely offline on your machine.
 
 ```bash
-git clone https://github.com/Noumenon-ai/vibe-scan-lite.git
-cd vibe-scan-lite
-npm install && npm run build
-node bin/vibe-scan.js /path/to/your/project
+npx vibe-scan-lite /path/to/your/project
 ```
 
 ## What It Catches
@@ -70,35 +67,31 @@ node bin/vibe-scan.js /path/to/your/project
 ## Install
 
 ```bash
-# Clone and build
-git clone https://github.com/Noumenon-ai/vibe-scan-lite.git
-cd vibe-scan-lite
-npm install && npm run build
+# Run without installing
+npx vibe-scan-lite /path/to/your/project
 
-# Scan any project
-node bin/vibe-scan.js /path/to/your/project
+# Or install globally
+npm install -g vibe-scan-lite
+vibe-scan-lite /path/to/your/project
 ```
-
-The package is not yet published to npm, so clone-and-build is the
-supported install path.
 
 ## Usage
 
 ```bash
 # Scan a project (default: all languages)
-node bin/vibe-scan.js ./my-project
+vibe-scan-lite ./my-project
 
 # Scan only JavaScript/TypeScript files
-node bin/vibe-scan.js ./my-project --lang js
+vibe-scan-lite ./my-project --lang js
 
 # Scan only Python files
-node bin/vibe-scan.js ./my-project --lang python
+vibe-scan-lite ./my-project --lang python
 
 # JSON output (pipe to other tools)
-node bin/vibe-scan.js ./my-project --json
+vibe-scan-lite ./my-project --json
 
 # Verbose mode (list all scanned files)
-node bin/vibe-scan.js ./my-project --verbose
+vibe-scan-lite ./my-project --verbose
 ```
 
 ## How It Works
